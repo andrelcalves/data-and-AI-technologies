@@ -51,3 +51,62 @@ The client.events.list(limit=5) the function retrieves the first `limit` events,
 
 client.events.list(limit=5) 
  
+
+
+## What is the purpose of a fuzzy search? 
+
+    [ ]Find data with no specifications
+    [X]Find data that approximately match specifications 
+    [ ]Find data that exactly match specifications
+
+Example:
+Fuzzy Search by name
+The search by name includes results that are similar in name, but not an exact match.
+
+```
+asset_name = "23-HA-9103"
+assets = client.assets.search(asset_name)
+print(assets[:3])
+```
+
+## What is the purpose of filtering? 
+
+    [X]Find data that exactly match specifications
+    [ ]Find data with no specifications
+    [ ]Find data that approximately match specification
+
+
+Retrieve a specific asset
+The client.assets.retrieve() interface provides the same information for one specific asset based 
+
+```
+indetifier =  "WMT:23-HA-9103"
+asset = client.assets.retrieve(external_id = indetifier)
+print(f"Name: {asset.name}, description: {asset.description}")
+```
+
+## What is the description of asset 23-FE-9106A?
+(You will need to run some code to answer this question)
+
+    [X]1ST STAGE COMPRESSOR LUBE OIL HEATER
+    [ ]1ST STAGE COMPRESSOR GAS SEAL FILTER A
+    [ ]1ST STAGE COMPRESSOR LUBE OIL FILTER B
+    [ ]1ST STAGE COMPRESSOR NITROGEN FILTER B
+
+## How many children does asset 23-PDT-92530 have?
+
+(You will need to run some code to answer this question)
+
+    [ ]2
+    [X]3
+    [ ]4
+    [ ]7
+
+Example: 
+```
+asset_name =  "WMT:23-PDT-92530"
+subtree = client.assets.retrieve_subtree(external_id = asset_name) 
+ # Remove the root asset from the list of assets to count only the childs
+subtree.remove(asset_name)
+print(len(subtree))
+```

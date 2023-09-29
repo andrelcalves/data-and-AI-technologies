@@ -27,11 +27,40 @@ client = CogniteClient(
 #subtree = client.assets.retrieve_subtree(id=asset_id) 
 #print(subtree[:5])
 
-asset_name =  "WMT:23-PDT-92530"
-subtree = client.assets.retrieve_subtree(external_id = asset_name) 
+#asset_name =  "WMT:23-PDT-92530"
+#subtree = client.assets.retrieve_subtree(external_id = asset_name) 
  # Remove the root asset from the list of assets to count only the childs
-subtree.remove(asset_name)
-print(len(subtree))
+#subtree.remove(asset_name)
+#print(len(subtree))
+
+
+
+#asset_name =  "23-PI-96145"
+#asset_id =  1418893254875430
+
+#subtree = client.assets.retrieve_subtree(id = asset_id)
+ # Remove the root asset from the list of assets to count only
+#subtree.remove(asset_name)
+#print(len(subtree))
+
+# 2 - 0
+
+#asset_id =  2539007469802785
+
+#subtree = client.assets.retrieve_subtree(id = asset_id)
+ # Remove the root asset from the list of assets to count only
+#subtree.remove(asset_name)
+#print(subtree)
+
+# 6 - N
+
+asset_id = 8230264121219051
+subtree = client.assets.retrieve_subtree(id = asset_id)
+print(subtree)
+
+# 9 - R
+#COG-D1NNER!
+
 
 
 

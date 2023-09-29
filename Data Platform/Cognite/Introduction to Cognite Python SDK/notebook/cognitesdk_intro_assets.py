@@ -35,14 +35,14 @@ client = CogniteClient(
 #Search for Assets
 #The client.assets.search() function allows you to search by a specific property of the asset, including its name, description, etc.
 
-print(client.assets.search("23-FE-9106A", limit=5))
+#print(client.assets.search("23-FE-9106A", limit=5))
 
 #Fuzzy Search by name
 #The search by name includes results that are similar in name, but not an exact match.
 
-#asset_name = "23-HA-9103"
-#assets = client.assets.search(asset_name)
-#print(assets[:3])
+asset_name = "23-CB-9104B"
+assets = client.assets.search(asset_name)
+print(assets[:3])
 
 #Retrieve a specific asset
 #The client.assets.retrieve() interface provides the same information for one specific asset based on the provided ID or external ID.
@@ -52,8 +52,21 @@ print(client.assets.search("23-FE-9106A", limit=5))
 #print(f"Name: {asset.name}, description: {asset.description}")
 
 
-#indetifier =  2011813110741085
+#indetifier =  928299407571359
 #asset = client.assets.retrieve(id = indetifier)
 #print(f"Name: {asset.name}, description: {asset.description}")
 
+#1- C
 
+
+#indetifier =  3257705896277160
+#asset = client.assets.retrieve(id = indetifier)
+#print(f"Name: {asset.name}, description: {asset.description}")
+
+#5- D
+
+#indetifier =  3810759783087892
+#asset = client.assets.retrieve(id = indetifier)
+#print(f"Name: {asset.name}, description: {asset.description}")
+
+#8-     E

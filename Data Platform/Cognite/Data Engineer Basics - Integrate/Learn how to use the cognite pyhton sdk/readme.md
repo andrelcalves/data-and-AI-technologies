@@ -156,8 +156,51 @@ client.data_set.retrieve_mutiple(external_ids=["OID/VAL/Assets","VAL/FILES/PNIDS
 
 Use of igonere_unknown_ids=True to ignore external_ids that doesn't match
 
-client.data_set.retrieve_mutiple(external_ids=["OID/VAL/Assets","VAL/FILES/PNIDS","TESTE N EXEISTE"], ignore_unknown_ids=True)
 
+```
+client.data_set.retrieve_mutiple(external_ids=["OID/VAL/Assets","VAL/FILES/PNIDS","TESTE N EXEISTE"], ignore_unknown_ids=True)
+```
 
 ## Retrieve Part 02
 
+Retrieve all items related to an asset 
+
+```
+c.asset.retrieve_subtree(id=671154545454)
+```
+
+or
+
+```
+asset_obj = c.asset.retrive(id=671154545454)
+# direct children of a specific asset
+asset_obj.children()
+# get the parent of a asset
+asset_obj.parent()
+
+#get events of a specific asset
+asset_obj.events()
+# get files of a specific asset
+asset_obj.files()
+# sequences
+asset_obj.sequences()
+# timeseries
+asset_obj.time_series()
+```
+
+### Retrieve aggreated data
+
+```
+c.datapoints.retrieve_dataframe(external_id=['',''],
+    start="10w-ago",
+    end="now",
+    aggregates=["avarage","sum"],
+    granulality="1h"
+)
+```
+
+### Retrieve latest datapoint
+
+```
+c.datapoints.retrieve_latest(external_id='pi:163657', before='5w-ago')[0]
+```

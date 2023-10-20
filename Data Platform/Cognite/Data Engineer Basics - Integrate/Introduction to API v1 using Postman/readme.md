@@ -64,3 +64,4 @@ Enter the Auth URL as https://login.microsoftonline.com/{{tenant-id}}/oauth2/v2.
 Input the Client ID as https://postman.cogniteapp.com
 And the Scope as {{baseURL}}/.default
 Select Client Authentication as Send as Basic Auth header.
+

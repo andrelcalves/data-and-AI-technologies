@@ -78,3 +78,36 @@ Projects can contain A LOT of data, and downloading it all into Power BI is not 
 7.  This data is filtered according to our specifications. Now, we can add more filters if needed. If not, clicking Close & Apply will load the data.
 8.  You can see all the data you queried for by clicking the Data view.
 
+### Aggregation
+
+* Time series tend to store large quantities of data points. 
+* To get insight from you data, you typically compute aggregates from the raw data.
+* CDF pre-calculates the most of commom aggregates for numerical data points in time series so that they are available with short response time.
+* Instead of downloading and manually aggregation data in Power BI, you can query CDF for the aggregates is you specify the time range and granularity.
+
+#### Aggregates for a single time series
+
+##### Summary
+1.  In the Power Query Editor, get the time series table using the Cognite Power BI connector.
+2.  Now that we have added the data, the next step is to use filtering to find the time series we want aggregates from.
+3.  Click the drop-down button in the ID column.
+4.  Select Text Filters and select Begins with.
+5.  In the Filter Rows dialog box, specify conditions to filter the rows in the column. In this example, let's keep the rows where 'id' begins with 6 AND ends with 1. 
+6.  Click Ok.
+7.  Then, in the Aggregate column select Function.
+8.  Specify the time range and granularity. (Start: 01/06/16 and End: 01/06/18 and granularity (1d)), and then select OK.
+9.  The Power Query Editor displays a table with the aggregates for the specified time range. Select Close and apply and click here to view the aggregates
+
+#### Aggregates for multiple time series
+
+##### Summary
+1.  Import your Time series data and the TimeseriesAggregate function using the Cognite Power BI connector.
+2.  Let's first filter the time series we want aggregates from.
+3.  Click the drop-down button here.
+4.  Select Text Filters and select Begins with.
+5.  In the Filter Rows dialog box, specify conditions to find the time series you want aggregates from. In this example, we want to filter rows where 'id" begins with 1 AND ends with 0. 
+6.  Click Ok.
+7.  Then, select the TimeseriesAggregate function, and set the granularity (1d), start time (1/07/2016), and end time (1/07/2018). Then select Choose column.
+8.  In the Select Column window, select your Timeseries table, and the Id column from the table to specifiy which time series to fetch aggregates from in CDF. Then select OK.
+9.  Select Invoke to start retrieving the aggregates.
+10. The Power Query Editor displays a new table named Invoked Function in the Query panel with the aggregates for the specified time range. Then select Close and apply.

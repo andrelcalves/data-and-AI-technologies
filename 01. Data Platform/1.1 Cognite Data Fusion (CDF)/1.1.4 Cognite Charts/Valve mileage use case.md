@@ -19,42 +19,6 @@ Now, for the dynamics, we can analyze the valve's movement. The initial step inv
 Finally, we accumulate our movement by integrating concerning time. As we differentiate per second, integration should also occur per second, thus eliminating the time dimension and providing us with the distance the valve has traveled.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 A haste da válvula controla o fluxo de gás na primeira etapa do sistema de tratamento de gás. Para evitar que o compressor oscile, a haste precisa mover-se para cima e para baixo no ritmo rápido. A cada segundo, a haste atrita contra o revestimento, deixando-a vulnerável à abrasão. Em caso de mau funcionamento do compressor, a produção será interrompida, criando um mundo de problemas para os operadores.
 
 Tipicamente, a manutenção de válvulas é realizada de acordo com um cronograma fixo baseado em parâmetros como tempo total de funcionamento. Esse processo é ineficiente porque, ao longo de um período determinado, você pode acabar realizando a manutenção de uma válvula que já está atrasada ou de uma que ainda não requer manutenção.

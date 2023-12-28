@@ -22,3 +22,30 @@ After the course:
 
 - Continue to use the SDK documentation, the Cognite Functions documentation, and the provided notebooks as a reference when you work with the Cognite Python SDK.
 - You can use the CI/CD pipeline with Github actions (as you'll see in Notebook 5) to deploy Cognite Functions.
+
+
+To access the cognite fusion for follow the examples please enter the organization name as cognite-learn then select ds-cognitefunctions as the project name. 
+
+!["Cognite functions examples"](img/cognite_function_project.png)
+
+## Typical workflow
+
+Let’s see what a typical workflow looks like with Cognite Functions.
+
+- You create your code for the calculation.
+- You restructure this code so that it is in the format that is expected by Cognite Functions (handler.py).
+- When you have created this handler.py, you can create and deploy the function using Python SDK or the CDF user interface.
+- When the function is deployed and ready, it can be called on-demand or on a schedule. You can monitor the status of deployment and function calls in the Fusion user interface as well as using code.
+-Should I use the SDK or the CDF user interface?
+
+- Choose the CDF user interface when you deploy a single function for experimental or test purposes, and use the SDK when you want to deploy functions that are automatable, scalable, and reusable.
+
+- We suggest using the user interface to manage and get an overview of all your functions.
+
+- What does the architecture of Cognite Functions look like?
+
+1. When deploying a function via Python SDK or the CDF user interface.
+!["Cognite Function Workflow"](img/cognite_function_01.png)
+2. When calling a function via Python SDK or the CDF user interface.
+!["Cognite Function Workflow"](img/cognite_function_02.png)
+

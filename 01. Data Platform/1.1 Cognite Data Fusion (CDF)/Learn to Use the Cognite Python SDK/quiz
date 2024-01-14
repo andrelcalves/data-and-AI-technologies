@@ -1,0 +1,121 @@
+uestion 1:  Incorrect answer
+
+What are the different ways of authenticating your Cognite Client?
+Multiple answers may be correct.
+x Interactive login
+x Device code
+ Application code
+x Tenant secret
+x Client credentials
+
+correto seria todas
+
+Question 2:  Incorrect answer
+What is the primary purpose of using data sets?
+
+ x To group use case data together
+ To make it look organized
+ To separate who can alter the data coming from different source systems
+
+Question 3:  Correct answer
+What are some of the Python objects that you can import from cognite.client.data_classes?
+Multiple answers may be correct.
+x Asset
+ Country
+ Region
+x TimeSeries
+x Event
+
+Question 4:  Correct answer
+How do you create an asset in CDF which is linked to a particular data set?
+
+ client.time_series.create(TimeSeries(name=<asset_name>))
+ client.time_series.data.insert(Asset(name=<asset_name>, data_set_id=<data_set_id>))
+ client.assets.create(Asset(name=<asset_name>))
+ x client.assets.create(Asset(name=<asset_name>, data_set_id=<data_set_id>)))
+
+Question 5:  Correct answer
+How can you link an asset to another asset?
+
+ x By specifying the parent id on asset creation
+ By specifying the root id on asset creation
+ By specifying the child id on asset creation
+ You don’t need to as the SDK will do it for you.
+
+Question 6:  Correct answer
+If you were looking for a particular time series but didn’t know the exact name, what method would you use?
+
+ client.time_series.list(<time_series_name>)
+ x client.time_series.search(<time_series_name>)
+ client.time_series.look_up(<time_series_name>)
+
+Question 7:  Incorrect answer
+What is the format that you need to specify the start time and end time of a CDF event?
+
+ String
+ x Datetime
+ Integer (milliseconds since epoch)
+
+Question 8:  Incorrect answer
+When using the list operation (e.g. client.assets.list()), how many results by default will the Python SDK return?
+
+ x All of them
+ 10
+ 25 (correta)
+ 50 
+
+Question 9:  Correct answer
+What are the different ways that you can insert datapoints into CDF?
+Multiple answers may be correct.
+ x client.time_series.data.insert_dataframe()
+ x client.time_series.data.insert()
+ client.time_series.data.insert_data()
+ client.time_series.data.insert_list()
+
+Question 10:  Incorrect answer
+Where can you find more information about the Python SDK?
+Multiple answers may be correct.
+x SDK documentation: https://cognite-sdk-python.readthedocs-hosted.com/en/latest/
+x Cognite Hub: https://hub.cognite.com/
+ Code docstrings (using Shift + Tab)
+
+Question 11:  Incorrect answer
+What is the id of the data set called “world_info_jack”?
+
+ x 6072660243794946
+ 5548572851312583
+ 8144932939408110
+ 6133408726791096
+
+Question 12:  Incorrect answer
+What is the approximate total population of Europe from the data in the hands-on exercise on 2021-01-01?
+
+ 450 million
+ 550 million
+ 650 million
+ x 750 million
+
+Question 13:  Incorrect answer
+How many of the ingested events have type “Volcanic Activity”?
+
+ 1
+ 2
+ x 3
+ 4
+
+Question 14:  Incorrect answer
+What is the earliest start time in the events logs?
+
+ 1267401600000
+ 1297401600000
+ 1034234023423
+ x 113423423234
+
+Question 15:  Correct answer
+
+What is the external-id of the label that was used to categorize cold countries?
+
+ cold-climate
+ x cold-countries
+ cold-climate-countries
+ hot-climate

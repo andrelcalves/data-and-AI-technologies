@@ -84,3 +84,14 @@ If you have a pandas data frame with data points you want to add to a time serie
 dataframe (pandas.DataFrame) – Pandas DataFrame Object containing the time series.
 external_id_headers (bool) – Set to True if the column headers are external ids rather than internal ids. Defaults to True.
 dropna (bool) – Set to True to skip NaNs in the given DataFrame, applied per column.
+
+Overview of delete
+ 
+
+The last function of this section is the delete function where you have to pass the ids (or external ids) of the resources you want to delete to the function. However, some resources have extra parameters: for example, AssetsAPI.delete, TimeSeriesAPI.delete, and EventsAPI.delete have the parameter ignore_unknown_ids, which Ignores the ids and external ids that are not found rather than throwing an exception.  This is great way to make sure something is deleted without the fear of exceptions beings raised. AssetsAPI.delete has the parameter recursive, which, when set to True, recursively deletes the whole asset subtrees under given ids.
+
+Here is an example of how to delete 4 assets with id = 1,2 and 3, and external id = “foo”:
+
+from cognite.client import CogniteClient
+c = CogniteClient()
+c.assets.delete(id=[1,2,3], external_id="foo")

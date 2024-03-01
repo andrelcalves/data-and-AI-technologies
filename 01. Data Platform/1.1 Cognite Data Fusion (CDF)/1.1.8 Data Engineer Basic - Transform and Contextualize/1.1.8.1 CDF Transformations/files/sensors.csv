@@ -1,0 +1,11 @@
+tag;isString;unit;isStep;info;location;office_id
+Oslo_temperature;false;DegC;false;Temperature in Oslo office;Norway;NOR_OSL
+Stavanger_temperature;false;DegC;false;Temperature in Stavanger office;Norway;NOR_SVG
+Tokyo_temperature;false;DegC;false;Temperature in Tokyo office;Japan;JPN_TYO
+Austin_temperature;false;DegC;false;Temperature in Austin office;US;US_AUS
+Houston_temperature;false;DegC;false;Temperature in Houston office;US;US_HOU
+Oslo_pressure;false;bar;false;Pressure in Oslo office;Norway;NOR_OSL
+Stavanger_pressure;false;bar;false;Pressure in Stavanger office;Norway;NOR_SVG
+Tokyo_pressure;false;bar;false;Pressure in Tokyo office;Japan;JPN_TYO
+Austin_pressure;false;bar;false;Pressure in Austin office;US;US_AUS
+Houston_pressure;false;bar;false;Pressure in Houston office;US;US_HOU

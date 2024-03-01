@@ -1,0 +1,10 @@
+office_name;pr_loc_id;loc_id;description;employees;;
+Cognite AS;;CogAS;Company;776;;
+Norway;CogAS;NOR;Country of office;533;;
+Japan;CogAS;JPN;Country of office;102;;
+US;CogAS;US;Country of office;141;;
+Stavanger;NOR;NOR_SVG;Location of office;34;;
+Oslo;NOR;NOR_OSL;Location of office;499;;
+Tokyo;JPN;JPN_TYO;Location of office;102;;
+Austin;US;US_AUS;Location of office;53;;
+Houston;US;US_HOU;Location of office;88;;

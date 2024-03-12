@@ -15,3 +15,5 @@ Note: To read our blog on CLI Transformations, [click here!](https://hub.cognite
 IMPORTANT: No run extractor as functiont in cognite because the cluster has limited resource.
 
 Go to [hand-on](/01. Data Platform\1.1 Cognite Data Fusion (CDF)\1.1.8 Data Engineer Basic - Transform and Contextualize\1.1.8.1 CDF Transformations\hands-on.md)
+
+
